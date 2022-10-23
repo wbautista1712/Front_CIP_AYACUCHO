@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="generator" content="Hugo 0.87.0" />
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1">
+    <meta name="description" content="Colegio de Ingenieros del Perú - CD. Ayacucho">
+    <title>CIP CD-AYACUCHO</title>
+
+    <!-- STYLESHEETS -->
+    <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~--- -->
+    <!-- Fonts [ OPTIONAL ] -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Verdana:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap CSS [ REQUIRED ] -->
+    <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
+
+    <!-- Nifty CSS [ REQUIRED ] -->
+    <link rel="stylesheet" href="./assets/css/nifty.min.css">
+
+    <!-- Nifty Demo Icons [ OPTIONAL ] -->
+    <link rel="stylesheet" href="./assets/css/demo-purpose/demo-icons.min.css">
+
+    <!-- Demo purpose CSS [ DEMO ] -->
+    <link rel="stylesheet" href="./assets/css/demo-purpose/demo-settings.min.css">
+
+    <link href="assets/css/cssIndex.css" rel="stylesheet" />
+</head>
+
+<body class="jumping">
+
+    <!-- PAGE CONTAINER -->
+    <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+    <div id="root" class="root mn--max hd--expanded">
+
+        <!-- CONTENTS -->
+        <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+        <section id="content" class="content">
+            <div class="content__header content__boxed overlapping">
+                <div class="content__wrap">
+                    <!-- Page title and information -->
+                    <h5 class="fontH">Bienvenido: Wilber Bautista Pizarro</h5>
+                    <!-- END : Page title and information -->
+                </div>
+
+            </div>
+
+            <div class="content__boxed">
+                <div class="content__wrap">
+                    <div class="row">
+                        <div class="col-xl-7 mb-3 mb-xl-0">
+
+                            <div class="card h-100">
+                                <div class="row-6" style="padding:10px 20px;">
+                                    <h3 class="fontH">Estado de Pagos de los últimos 6 meses</h3>
+                                </div>
+                                <div class="card-header d-flex align-items-center border-0">
+                                    <div class="col-xl-12">
+                                        <!-- Area Chart -->
+                                        <canvas id="_dm-barChart" style="height: 200px"></canvas>
+                                        <!-- END : Area Chart -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-5">
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <!-- Tile - HDD Usage -->
+                                    <div class="card bg-success text-white overflow-hidden mb-3">
+                                        <div class="p-3 pb-2">
+                                            <h5 class="mb-3"><i class="demo-psi-data-storage text-reset text-opacity-75 fs-3 me-2"></i> HDD Usage</h5>
+                                            <ul class="list-group list-group-borderless">
+                                                <li class="list-group-item p-0 text-reset d-flex justify-content-between align-items-start">
+                                                    <div class="me-auto">Free Space</div>
+                                                    <span class="fw-bold">132Gb</span>
+                                                </li>
+                                                <li class="list-group-item p-0 text-reset d-flex justify-content-between align-items-start">
+                                                    <div class="me-auto">Used space</div>
+                                                    <span class="fw-bold">1,45Gb</span>
+                                                </li>
+                                            </ul>
+                                        </div>
+
+                                        <!-- Area Chart -->
+                                        <div class="py-0" style="height: 70px; margin: 0 -5px -5px;">
+                                            <canvas id="_dm-hddChart"></canvas>
+                                        </div>
+                                        <!-- END : Area Chart -->
+
+                                    </div>
+                                    <!-- END : Tile - HDD Usage -->
+
+                                </div>
+                                <div class="col-sm-6">
+
+                                    <!-- Tile - Earnings -->
+                                    <div class="card bg-info text-white overflow-hidden mb-3">
+                                        <div class="p-3 pb-2">
+                                            <h5 class="mb-3"><i class="demo-psi-coin text-reset text-opacity-75 fs-2 me-2"></i> Earning</h5>
+                                            <ul class="list-group list-group-borderless">
+                                                <li class="list-group-item p-0 text-reset d-flex justify-content-between align-items-start">
+                                                    <div class="me-auto">Today</div>
+                                                    <span class="fw-bold">$764</span>
+                                                </li>
+                                                <li class="list-group-item p-0 text-reset d-flex justify-content-between align-items-start">
+                                                    <div class="me-auto">Last 7 Day</div>
+                                                    <span class="fw-bold">$1,332</span>
+                                                </li>
+                                            </ul>
+                                        </div>
+
+                                        <!-- Line Chart -->
+                                        <div class="py-0" style="height: 70px; margin: 0 -5px -5px;">
+                                            <canvas id="_dm-earningChart"></canvas>
+                                        </div>
+                                        <!-- END : Line Chart -->
+
+                                    </div>
+                                    <!-- END : Tile - Earnings -->
+
+                                </div>
+                            </div>
+                            
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="content__boxed">
+                <div class="content__wrap">
+
+                    <!-- Table with toolbar -->
+                    <div class="card">
+                        <div class="card-header">
+                            <h5 class="fontH">Mi estado de cuenta</h5>
+                            <div class="row">
+
+                                <!-- Left toolbar -->
+                                <div class="col-md-6 d-flex gap-1 align-items-center mb-3">
+                                    <button class="btn btn-danger hstack gap-2 align-self-center">
+                                        <i class="demo-psi-add fs-5"></i>
+                                        <span class="vr"></span>
+                                        Pagar
+                                    </button>
+                                    <button class="btn btn-icon btn-outline-light" aria-label="Print table">
+                                        <i class="demo-pli-printer fs-5"></i>
+                                    </button>
+                                    <div class="btn-group">
+                                        <button class="btn btn-icon btn-outline-light" aria-label="Information"><i class="demo-pli-exclamation fs-5"></i></button>
+                                        <button class="btn btn-icon btn-outline-light" aria-label="Remove"><i class="demo-pli-recycling fs-5"></i></button>
+                                    </div>
+                                </div>
+                                <!-- END : Left toolbar -->
+                                <!-- Right Toolbar -->
+                                <div class="col-md-6 d-flex gap-1 align-items-center justify-content-md-end mb-3">
+                                    <div class="form-group">
+                                        <input type="text" placeholder="Search..." class="form-control" autocomplete="off">
+                                    </div>
+                                    <div class="btn-group">
+                                        <button class="btn btn-icon btn-outline-light" aria-label="Download"><i class="demo-pli-download-from-cloud fs-5"></i></button>
+                                        <div class="btn-group dropdown">
+                                            <button class="btn btn-icon btn-outline-light dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
+                                                <span class="visually-hidden">Toggle Dropdown</span>
+                                            </button>
+                                            <ul class="dropdown-menu dropdown-menu-end">
+                                                <li><a class="dropdown-item" href="#">Action</a></li>
+                                                <li><a class="dropdown-item" href="#">Another action</a></li>
+                                                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                                <li>
+                                                    <hr class="dropdown-divider">
+                                                </li>
+                                                <li><a class="dropdown-item" href="#">Separated link</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- END : Right Toolbar -->
+
+                            </div>
+                        </div>
+
+                        <div class="card-body">
+                            <div class="table-responsive">
+                                <table class="table table-striped">
+                                    <thead>
+                                        <tr>
+                                            <th>N°</th>
+                                            <th>Concepto</th>
+                                            <th>Periodo</th>
+                                            <th>Fecha Pago</th>
+                                            <th>Importe cuota</th>
+                                            <th class="text-center">Estado de Pagos</th>
+                                            <th class="text-center">Tracking Number</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><a href="#" class="btn-link"> 1</a></td>
+                                            <td>CUOTA ORDINARIA</td>
+                                            <td><span class="text-muted">Mayo</span></td>
+                                            <td><span class="text-muted"><i class="demo-pli-clock"></i> 05/05/2022</span></td>
+                                            <td>S/. 15.00</td>
+                                            <td class="text-center fs-5">
+                                                <div class="d-block badge bg-success">Pagado</div>
+                                            </td>
+                                            <td class="text-center">-</td>
+                                        </tr>
+                                        <tr>
+                                            <td><a href="#" class="btn-link"> 2</a></td>
+                                            <td>CUOTA ORDINARIA</td>
+                                            <td><span class="text-muted">Junio</span></td>
+                                            <td><span class="text-muted"><i class="demo-pli-clock"></i> 05/05/2022</span></td>
+                                            <td>S/. 15.00</td>
+                                            <td class="text-center fs-5">
+                                                <div class="d-block badge bg-success">Pagado</div>
+                                            </td>
+                                            <td class="text-center">CGX0089734531</td>
+                                        </tr>
+                                        <tr>
+                                            <td><a href="#" class="btn-link"> 3</a></td>
+                                            <td>CUOTA ORDINARIA</td>
+                                            <td><span class="text-muted">Julio</span></td>
+                                            <td><span class="text-muted"><i class="demo-pli-clock"></i> 05/05/2022</span></td>
+                                            <td>S/. 15.00</td>
+                                            <td class="text-center fs-5">
+                                                <div class="d-block badge bg-success">Pagado</div>
+                                            </td>
+                                            <td class="text-center">CGX0089934571</td>
+                                        </tr>
+                                        <tr>
+                                            <td><a href="#" class="btn-link"> 4</a></td>
+                                            <td>CUOTA ORDINARIA</td>
+                                            <td><span class="text-muted">Agosto</span></td>
+                                            <td><span class="text-muted"><i class="demo-pli-clock"></i> 05/05/2022</span></td>
+                                            <td>S/. 15.00</td>
+                                            <td class="text-center fs-5">
+                                                <div class="d-block badge bg-success">Pagado</div>
+                                            </td>
+                                            <td class="text-center">CGX0089734574</td>
+                                        </tr>
+                                        <tr>
+                                            <td><a href="#" class="btn-link"> 5</a></td>
+                                            <td>CUOTA ORDINARIA</td>
+                                            <td><span class="text-muted">Setiembre</span></td>
+                                            <td><span class="text-muted"></span></td>
+                                            <td>S/. 15.00</td>
+                                            <td class="text-center fs-5">
+                                                <div class="d-block badge bg-danger">No Pagado</div>
+                                            </td>
+                                            <td class="text-center">-</td>
+                                        </tr>
+                                        <tr>
+                                            <td><a href="#" class="btn-link"> 6</a></td>
+                                            <td>CUOTA ORDINARIA</td>
+                                            <td><span class="text-muted">Octubre</span></td>
+                                            <td><span class="text-muted"></span></td>
+                                            <td>S/. 15.00</td>
+                                            <td class="text-center fs-5">
+                                                <div class="d-block badge bg-danger">No pagado</div>
+                                            </td>
+                                            <td class="text-center">-</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <nav class="text-align-center mt-5" aria-label="Table navigation">
+                                <ul class="pagination justify-content-center">
+                                    <li class="page-item disabled">
+                                        <a class="page-link" href="#">Previous</a>
+                                    </li>
+                                    <li class="page-item active" aria-current="page">
+                                        <span class="page-link">1</span>
+                                    </li>
+                                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                    <li class="page-item disabled"><a class="page-link" href="#">...</a></li>
+                                    <li class="page-item"><a class="page-link" href="#">5</a></li>
+                                    <li class="page-item">
+                                        <a class="page-link" href="#">Next</a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                    <!-- END : Table with toolbar -->
+
+                </div>
+            </div>
+            <!-- FOOTER -->
+            <footer class="content__boxed mt-auto">
+                <div class="content__wrap py-3 py-md-1 d-flex flex-column flex-md-row align-items-md-center">
+                    <div class="text-nowrap mb-4 mb-md-0">Copyright &copy; 2022 <a href="#" class="ms-1 btn-link fw-bold">Cap. Sistemas e Informática</a></div>
+                </div>
+            </footer>
+            <!-- END - FOOTER -->
+
+        </section>
+
+        <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+        <!-- END - CONTENTS -->
+        <!-- HEADER -->
+        <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+        <header class="header">
+            <div class="header__inner">
+
+                <!-- Brand -->
+                <div class="header__brand">
+                    <div class="brand-wrap">
+
+                        <!-- Brand logo -->
+                        <a href="./index.html" class="brand-img stretched-link">
+                            <img src="./assets/img/cip/cip_min.png" alt="CIP Logo" class="CIP logo" width="40" height="40">
+                        </a>
+
+                        <!-- Brand title -->
+                        <div class="brand-title" style="font-size:12pt;">CIP CD. Ayacucho</div>
+
+                        <!-- You can also use IMG or SVG instead of a text element. -->
+
+                    </div>
+                </div>
+                <!-- End - Brand -->
+
+
+                    <div class="header__content">
+
+                        <!-- Content Header - Left Side: -->
+                        <div class="header__content-start">
+
+                            <!-- Navigation Toggler -->
+                            <button type="button" class="nav-toggler header__btn btn btn-icon btn-sm" aria-label="Nav Toggler">
+                                <i class="demo-psi-view-list"></i>
+                            </button>
+
+                            <!-- Searchbox -->
+                            <div class="header-searchbox">
+
+                                <!-- Searchbox toggler for small devices -->
+                                <label for="header-search-input" class="header__btn d-md-none btn btn-icon rounded-pill shadow-none border-0 btn-sm" type="button">
+                                    <i class="demo-psi-magnifi-glass"></i>
+                                </label>
+
+                            </div>
+                        </div>
+                        <!-- End - Content Header - Left Side -->
+                        <!-- Content Header - Right Side: -->
+                        <div class="header__content-end">
+                            <!-- Usuario -->
+                            <div class="dropdown">
+
+                                <!-- Toggler -->
+                                <button class="header__btn btn btn-icon btn-sm" type="button" data-bs-toggle="dropdown" aria-label="User dropdown" aria-expanded="false">
+                                    <i class="demo-psi-male"></i>
+                                </button>
+
+                                <!-- User dropdown menu -->
+                                <div class="dropdown-menu dropdown-menu-end w-md-450px">
+
+                                    <!-- User dropdown header -->
+                                    <div class="d-flex align-items-center border-bottom px-3 py-2">
+                                        <div class="flex-shrink-0">
+                                            <img class="img-sm rounded-circle" src="./assets/img/profile-photos/1.png" alt="Profile Picture" loading="lazy">
+                                        </div>
+                                        <div class="flex-grow-1 ms-3">
+                                            <h5 class="mb-0">Aaron Chavez</h5>
+                                            <span class="text-muted fst-italic">aaron_chavez@example.com</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-md-7">
+
+                                            <!-- Simple widget and reports -->
+                                            <div class="list-group list-group-borderless mb-3">
+                                                <div class="list-group-item text-center border-bottom mb-3">
+                                                    <p class="h1 display-1 text-green">17</p>
+                                                    <p class="h6 mb-0"><i class="demo-pli-basket-coins fs-3 me-2"></i> New orders</p>
+                                                    <small class="text-muted">You have new orders</small>
+                                                </div>
+                                                <div class="list-group-item py-0 d-flex justify-content-between align-items-center">
+                                                    Today Earning
+                                                    <small class="fw-bolder">$578</small>
+                                                </div>
+                                                <div class="list-group-item py-0 d-flex justify-content-between align-items-center">
+                                                    Tax
+                                                    <small class="fw-bolder text-danger">- $28</small>
+                                                </div>
+                                                <div class="list-group-item py-0 d-flex justify-content-between align-items-center">
+                                                    Total Earning
+                                                    <span class="fw-bold text-primary">$6,578</span>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                        <div class="col-md-5">
+
+                                            <!-- User menu link -->
+                                            <div class="list-group list-group-borderless h-100 py-3">
+                                                <a href="#" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">
+                                                    <span><i class="demo-pli-mail fs-5 me-2"></i> Messages</span>
+                                                    <span class="badge bg-danger rounded-pill">14</span>
+                                                </a>
+                                                <a href="#" class="list-group-item list-group-item-action">
+                                                    <i class="demo-pli-male fs-5 me-2"></i> Profile
+                                                </a>
+                                                <a href="#" class="list-group-item list-group-item-action">
+                                                    <i class="demo-pli-gear fs-5 me-2"></i> Settings
+                                                </a>
+
+                                                <a href="#" class="list-group-item list-group-item-action mt-auto">
+                                                    <i class="demo-pli-computer-secure fs-5 me-2"></i> Lock screen
+                                                </a>
+                                                <a href="login.html" class="list-group-item list-group-item-action">
+                                                    <i class="demo-pli-unlock fs-5 me-2"></i> Cerrar Sesión
+                                                </a>
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <!-- End - User dropdown -->
+                            <!-- Sidebar Toggler -->
+                            <i class="demo-psi-dot-vertical"></i>
+
+                        </div>
+                    </div>
+                </div>
+</header>
+        <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+        <!-- END - HEADER -->
+        <!-- MAIN NAVIGATION -->
+        <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+        <nav id="mainnav-container" class="mainnav">
+            <div class="mainnav__inner">
+
+                <!-- Navigation menu -->
+                <div class="mainnav__top-content scrollable-content pb-5">
+                    <!-- Navigation Category -->
+                    <div class="mainnav__categoriy py-3">
+                        <h6 class="mainnav__caption mt-0 px-3 fw-bold"></h6>
+                        <ul class="mainnav__menu nav flex-column">
+
+                            <li class="nav-item">
+                                <a href="./index.html" class="nav-link mininav-toggle active">
+                                    <i class="demo-pli-bar-chart fs-5 me-2"></i>
+                                    <span class="nav-label mininav-content ms-1">Pagos</span>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="./datos-personales.html" class="nav-link mininav-toggle">
+                                    <i class="demo-pli-pen-5 fs-5 me-2"></i>
+                                    <span class="nav-label mininav-content ms-1">Datos Personales</span>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="./ayuda.html" class="nav-link mininav-toggle">
+                                    <i class="demo-pli-gear fs-5 me-2"></i>
+                                    <span class="nav-label mininav-content ms-1">Ayuda</span>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="./soporte-tecnico.html" class="nav-link mininav-toggle">
+                                    <i class="demo-pli-repair fs-5 me-2"></i>
+                                    <span class="nav-label mininav-content ms-1">Soporte Técnico</span>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="./terminos-condiciones.html" class="nav-link mininav-toggle">
+                                    <i class="demo-pli-receipt-4 fs-5 me-2"></i>
+                                    <span class="nav-label mininav-content ms-1">Términos y condiciones</span>
+                                </a>
+                            </li>
+                            <hr />
+                            <li class="nav-item">
+                                <a href="login.html" class="nav-link mininav-toggle collapsed" aria-expanded="false">
+                                    <i class="demo-pli-unlock fs-5 me-2"></i>
+                                    <span class="nav-label ms-1">Cerrar Sesión</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- END : Navigation Category -->
+                    <!-- Widget -->
+                    <div class="mainnav__profile">
+
+                        <!-- Widget buttton form small navigation -->
+                        <div class="mininav-toggle text-center py-2 d-mn-min">
+                            <i class="demo-pli-monitor-2"></i>
+                        </div>
+
+                        <div class="d-mn-max mt-5"></div>
+
+
+                    </div>
+                    <!-- End - Profile widget -->
+
+                </div>
+                
+
+            </div>
+        </nav>
+       
+
+    </div>
+ 
+    <!-- Popper JS [ OPTIONAL ] -->
+    <script src="./assets/vendors/popperjs/popper.min.js" defer></script>
+
+    <!-- Bootstrap JS [ OPTIONAL ] -->
+    <script src="./assets/vendors/bootstrap/bootstrap.min.js" defer></script>
+
+    <!-- Nifty JS [ OPTIONAL ] -->
+    <script src="./assets/js/nifty.js" defer></script>
+
+    <!-- Nifty Settings [ DEMO ] -->
+    <script src="./assets/js/demo-purpose-only.js" defer></script>
+
+    <!-- Chart JS Scripts [ OPTIONAL ] -->
+    <script src="./assets/vendors/chart.js/chart.min.js" defer></script>
+
+    <!-- Initialize [ SAMPLE ] -->
+    <script src="./assets/pages/dashboard-1.js" defer></script>
+
+    <!-- Initialize [ SAMPLE ] -->
+    <script src="./assets/pages/dashboard-2.js" defer></script>
+
+</body>
+
+</html>
